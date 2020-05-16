@@ -7,7 +7,8 @@ import { withApollo } from '../../lib/apollo';
 import { withRedux } from '../../lib/redux';
 import ReactHtmlParser from 'react-html-parser';
 import { compose } from 'redux';
-import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux';
+import Link from 'next/link';
 
 
 const PRODUCT_QUERY = gql`
@@ -46,8 +47,8 @@ const Pdp = () => {
     const { id } = router.query;
 
     const dispatch = useDispatch();
-
-    const [cart, setCart] = useState(0);
+    
+    const [classCart, setClassCart] = useState('hide');
 
     const { loading, data } = useQuery(PRODUCT_QUERY, {
         fetchPolicy: 'network-only',
@@ -78,6 +79,7 @@ const Pdp = () => {
             type: 'ADD_TO_CART',
             item
         });
+        setClassCart("show");
     }
 
     return (
@@ -95,7 +97,14 @@ const Pdp = () => {
                 <div className="product-description">
                     {ReactHtmlParser(productData.description.html)}
                 </div>
-                <button onClick={() => addToCart()}>Add to cart</button>
+                <div className="button-wrapper">
+                    <span className={classCart}>Added to&nbsp; 
+                        <Link href="/cart">
+                            <a className="link-underline">cart</a>
+                        </Link>
+                    </span>
+                    <button onClick={() => addToCart()}>Add to cart</button>
+                </div>
             </div>
         </Layout>
     );
