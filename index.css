@@ -1,0 +1,71 @@
+body {
+    background: #FFF;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 20px;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.width-half {
+    width: 50%;
+}
+
+.navigation-wrapper {
+    text-align: center;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    color: #222;
+    text-decoration: underline;
+}
+
+.catalog-product-list .category-banner {
+    width: 100%;;
+}
+
+.catalog-product-list .product-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.catalog-product-list .product-list li {
+    width: 50%;
+    float: left;
+}
+.catalog-product-list .product-list li img {
+    width: 100%;
+}
+
+.catalog-product-view .product-image {
+    width: 100%;
+}
+.catalog-product-view .price {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.catalog-product-view .sku {
+    margin-top: 0;
+}
+.catalog-product-view .product-description {
+    border-bottom: 1px solid #666;
+    border-top: 1px solid #666;
+}
+.catalog-product-view button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.checkout-cart-index .cart-items table {
+    width: 100%;
+}
+.checkout-cart-index .cart-items .cart-item-image {
+    width: 100px;;
+}
