@@ -12,6 +12,15 @@ footer {
 .width-half {
     width: 50%;
 }
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+.link-underline {
+    text-decoration: underline;
+}
 
 .navigation-wrapper {
     text-align: center;
@@ -56,11 +65,26 @@ a:hover {
     border-bottom: 1px solid #666;
     border-top: 1px solid #666;
 }
-.catalog-product-view button {
+.catalog-product-view .button-wrapper {
     margin-top: 30px;
-    width: 100%;
-    padding: 10px;
+    text-align: center;
+}
+.catalog-product-view .button-wrapper span {
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+.catalog-product-view .button-wrapper button {
+    border: 1px solid #ccc;
+    border-radius: 3px;
     cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    width: 100%;
+}
+.catalog-product-view .button-wrapper button:hover {
+    background: #000;
+    color: #EEE;
 }
 
 .checkout-cart-index .cart-items table {
