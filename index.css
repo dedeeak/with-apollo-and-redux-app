@@ -31,21 +31,34 @@ a {
 }
 a:hover {
     color: #222;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .catalog-product-list .category-banner {
-    width: 100%;;
+    border-radius: 4px;
+    width: 100%;
 }
 
 .catalog-product-list .product-list {
     list-style: none;
     padding-left: 0;
 }
-
+.catalog-product-list .product-list:after {
+    clear: both;
+    content: "";
+    display: block;
+}
 .catalog-product-list .product-list li {
-    width: 50%;
+    border-radius: 3px;
     float: left;
+    margin-bottom: 5px;
+    width: 50%;
+}
+.catalog-product-list .product-list li:hover {
+    background: #EEE;
+}
+.catalog-product-list .product-list li .product-item-wrapper {
+    padding: 2px;
 }
 .catalog-product-list .product-list li img {
     width: 100%;

@@ -71,17 +71,21 @@ const Category = () => {
                 <ul className="product-list">
                     {categoryProducts.map((product) => (
                         <li key={product.id}>
-                            <img src={product.small_image.url} />
-                            <Link
-                                href="/pdp/[id]"
-                                as={`/pdp/${product.url_key}`}
-                            >
-                                <a>{product.name}</a>
-                            </Link>
-                            <p>
-                                {product.price_range.minimum_price.final_price.currency}&nbsp;
-                                {product.price_range.minimum_price.final_price.value}
-                            </p>
+                            <div className="product-item-wrapper">
+                                <Link
+                                    href="/pdp/[id]"
+                                    as={`/pdp/${product.url_key}`}
+                                >
+                                    <a>
+                                        <img src={product.small_image.url} />
+                                        <span>{product.name}</span>
+                                        <p>
+                                            {product.price_range.minimum_price.final_price.currency}&nbsp;
+                                            {product.price_range.minimum_price.final_price.value}
+                                        </p>
+                                    </a>
+                                </Link>
+                            </div>
                         </li>
                     ))}
                 </ul>
